@@ -1,0 +1,11 @@
+<h1>Please log in!</h1>
+
+<%= form_tag '/sessions', method: 'post' do %>
+<%= label_tag :user[name] %>
+<%= text_field_tag :user[name] %>
+
+<%= label_tag :user[password] %>
+<%= text_field_tag :user[password] %>
+
+<%= submit_tag "Login" %>
+<% end %>

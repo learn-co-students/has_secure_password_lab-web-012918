@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  #user homepage
+  get '/', to: 'welcome#index'
+
+  # signup page
+  get 'users/new', to: 'users#new'
+  post 'users/', to: 'users#create'
+
+  # log in page form
+  get 'sessions/', to: 'sessions#new'
+  post 'sessions/', to: 'sessions#create'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
